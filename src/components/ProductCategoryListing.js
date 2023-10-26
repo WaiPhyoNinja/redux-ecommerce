@@ -1,19 +1,19 @@
-import React, { useEffect } from 'react'
-import ProductComponent from './ProductComponent'
-import { useDispatch } from 'react-redux'
 import axios from 'axios';
-import { setProducts } from '../redux/actions/productsActions'
-const ProductListing = () => {
+import React, { useEffect } from 'react'
+import { useDispatch } from 'react-redux';
+import { setProducts } from '../redux/actions/productsActions';
+import ProductComponent from './ProductComponent';
 
+const ProductCategoryListing = () => {
     const dispatch = useDispatch();
     const fetchProducts = async () => {
-        const response = await axios.get("https://fakestoreapi.com/products")
+        const response = await axios.get("https://fakestoreapi.com/products/category/jewelery")
             .catch((error) => {
                 console.log("error is ", error);
             })
         dispatch(setProducts(response.data))
     }
-    // https://fakestoreapi.com/products/category/jewelery
+    
     useEffect(() => {
         fetchProducts();
     }, []);
@@ -25,4 +25,4 @@ const ProductListing = () => {
     )
 }
 
-export default ProductListing
+export default ProductCategoryListing

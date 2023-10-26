@@ -16,7 +16,7 @@ const Header = () => {
         </Link>
         <div className="right menu">
           <Link to="/products" className="item">Products</Link>
-          <Link to="/categories" className="item">Categories</Link>
+          <Link to="/cateory" className="item">Categories</Link>
           <Link to="/carts" className="item" style={{ textDecoration: 'none', display: 'flex', color : 'blue', alignItems: 'center' }}>
             <FontAwesomeIcon icon={faCartShopping} style={{ marginRight: '8px' , fontSize: 20 }} />
             <span>{cartCount !== 0 ? cartCount : ''}</span>
