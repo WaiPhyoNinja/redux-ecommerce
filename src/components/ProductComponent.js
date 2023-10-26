@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 const ProductComponent = () => {
     const products = useSelector((state) => state.allProducts.products);
+    
     const renderLists = products.map((product) => {
         const {id , title , image , price , category } = product;
         return (
