@@ -13,7 +13,7 @@ const ProductListing = () => {
             })
         dispatch(setProducts(response.data))
     }
-    // https://fakestoreapi.com/products/category/jewelery
+   
     useEffect(() => {
         fetchProducts();
     }, []);

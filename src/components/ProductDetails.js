@@ -7,9 +7,9 @@ import { setCarts } from '../redux/actions/cartAction';
 
 const ProductDetails = () => {
   const { productId } = useParams();
-  const [cart , setCart] = useState([]);
+  const [cart, setCart] = useState([]);
   let product = useSelector((state) => state.product);
-
+  let carts = useSelector((state) => state.carts);
   const { id, image, title, price, category, description } = product;
   const dispatch = useDispatch();
 
@@ -29,8 +29,14 @@ const ProductDetails = () => {
     };
   }, [productId]);
 
+
   const addedCart = (product) => {
-    dispatch(setCarts(product))
+    const isProductInCart = carts.items.filter(item => item.id === product.id);
+    if (isProductInCart.length > 0) {
+      console.log('Product is already in the cart');
+    } else {
+      dispatch(setCarts(product))
+    }
   }
 
   return (
@@ -68,3 +74,18 @@ const ProductDetails = () => {
 }
 
 export default ProductDetails
+
+// maingalar par ပြော
+// နမည်
+// ဘွဲ့ 
+// လက်ရှိ နေပြည်တော်
+// company က‌တော့ gov , တခြား project 
+// laravel 
+// Server ပိုင်းမှာ physical 
+// report 
+// content 
+// traing 
+// payment 
+
+// အကြမ်းဖျင်း 
+// payment 

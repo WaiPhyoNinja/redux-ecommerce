@@ -149,3 +149,69 @@ h2 {
   display: flex;
   flex-direction: column;
 }
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  margin-top: 80px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-content li {
+  padding: 8px;
+  text-align: left;
+}
+
+
+.item:hover .dropdown-content {
+  display: block;
+}
+
+/* Style the dropbtn when hovered */
+.item:hover .dropbtn {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.item {
+  text-decoration: none;
+  display: block; 
+  padding: 10px; 
+  border-radius: 4px; 
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+}
+
+.item:hover {
+  background-color: #ddd; /* Change background color on hover */
+  color: #000; /* Change text color on hover */
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* You can also style the elements inside the flex container as needed */
+.flex-container p {
+  margin: 0; /* Remove default margin on the paragraph */
+}
+
+.flex-container button {
+  background-color: #007bff; /* Example button style */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+}

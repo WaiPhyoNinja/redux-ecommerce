@@ -6,6 +6,7 @@ import ProductListing from './components/ProductListing';
 import ProductDetails from './components/ProductDetails';
 import Cart from './components/Cart';
 import ProductCategoryListing from './components/ProductCategoryListing';
+import Checkout from './components/Checkout';
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
           <Route path="/products" element={<ProductListing />} />
           <Route path="/carts" element={<Cart />} />
           <Route path="/product/:productId" element={<ProductDetails />} />
-          <Route path='/cateory' element={<ProductCategoryListing />} />
+          <Route path='/category/:category' element={<ProductCategoryListing />} />
+          <Route path='/checkout' element={<Checkout />} />
         </Routes>
       </Router>
     </div>
