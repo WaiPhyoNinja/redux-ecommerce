@@ -215,3 +215,61 @@ h2 {
   padding: 10px 20px;
   border: none;
 }
+
+.payment-main{
+  margin-top: 100px;
+}
+
+.payment-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.payment-container h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.payment-form {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+  display: block;
+}
+
+.form-group input[type="text"], .form-group input[type="number"], .form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group select {
+  padding: 8px;
+}
+
+.form-group input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.payment-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.payment-button:hover {
+  background-color: #0056b3;
+}

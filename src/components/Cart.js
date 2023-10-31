@@ -31,7 +31,9 @@ const Cart = () => {
             <h2>Your Cart</h2>
             <div className="cart-list">
                 {cartItems.length === 0 ? (
-                    <p>Your cart is empty</p>
+                    <>
+                        <p>Your cart is empty</p>
+                    </>
                 ) : (
                     cartItems.map((cart, key) => {
                         const itemPrice = parseFloat(cart.price) * count;
@@ -63,10 +65,15 @@ const Cart = () => {
                     })
                 )}
             </div>
-            <div className="flex-container">
-                <p>Total Price: {total} Ks</p>
-                <Link to="/checkout"><button>Check Out</button></Link>
-            </div>
+            {cartItems.length === 0 ? (
+                <h2> Total Prices : 0 Ks </h2>
+            ) : (
+                <div className="flex-container">
+                    <p>Total Price: {total} Ks</p>
+                    <Link to="/checkout"><button>Check Out</button></Link>
+                </div>
+            )}
+
         </div>
     )
 }
